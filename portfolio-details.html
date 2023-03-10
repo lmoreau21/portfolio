@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>DevFolio Bootstrap Portfolio Template - Portfolio Details</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!--<script src="js/project_data.json"></script> -->
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  
+  <script src="assets/js/project.json"></script>
+
+</head>
+
+<body>
+  
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">Portfolio</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#projects">Projects</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+   
+    <!-- ======= Portfolio Details Section ======= -->
+    
+  
+      <div id="projects-list"></div>
+
+     
+      <script>
+        fetch("assets/js/project.json")
+          .then(response => response.json())
+          .then(data => {
+            const projectsList = document.getElementById("projects-list");
+            var id = "bugsmash";
+            const idx = document.URL.indexOf('?')
+            if (idx != -1) {
+              id = document.URL.substring(idx+1)
+            }
+              
+
+              const projectData = data[id];
+              console.log(projectData);
+
+              var projectElement = document.createElement("div");
+              projectElement.innerHTML = `
+
+              
+              <div class="hero hero-single route bg-image" style="background-image: url(assets/img/background1.jpg)">
+                <div class="overlay-mf"></div>
+                <div class="hero-content display-table">
+                  <div class="table-cell">
+                    <div class="container">
+                      <h2 class="hero-title mb-4"> ${projectData.title}</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              
+
+              <section id="jaot" class="portfolio-details">
+     
+    
+              <div class="container" style="width: 50%; background-color: #8f0101;padding-top: 20px;">
+                <div class="portfolio-details-slider swiper">
+                  <div class="swiper-wrapper align-items-center">
+
+                    <div class="swiper-slide">
+                      <img src="assets/img/${projectData.img}" alt="" width="50%">
+                    </div>
+
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+
+
+
+              <div class="portfolio-info"  style="width: 70%; margin-left: 15%;">
+              <h3>Overview</h3>
+                <ul>
+                <li><strong>Category:</strong> ${projectData.category}</p>
+                 <li><strong>Project date:</strong> ${projectData.date}</li>
+                <li><strong>Project URL</strong>: <a href="${projectData.github}"> ${projectData.github}</a></li>
+              <ul>
+              </div>
+              <div class="portfolio-description" style="width: 70%; margin-left: 15%;">
+              <h2>About</h2>
+                <p> ${projectData.description}</p>
+                <p>Tech stack:</strong> ${projectData.techstack.join(", ")}</p>
+              </div> 
+              </section>
+                `;
+              projectsList.appendChild(projectElement);
+          }).catch(error => console.error(error));
+        </script>
+        </div>
+        
+      
+      <!--
+        <div class="portfolio-info"  style="width: 70%; margin-left: 15%;">
+          <h3>Overview</h3>
+          <ul>
+            <li><strong>Category</strong>: Web design</li>
+            <li><strong>Project date</strong>: Fall 2022</li>
+            <li><strong>Project URL</strong>: <a href="#">https://github.com/lmoreau21/JacksOfAllTrades</a></li>
+          </ul>
+        </div>
+        <br>
+        <div class="portfolio-description" style="width: 90%; margin-left: 5%;">
+          <h2>About</h2>
+          <p>
+            Learning new skills can be a difficult task without the proper resources. Many services out there are overly complicated, time consuming, and may charge hidden fees. Our website, Jack of all Trades, allows users to effectively learn new simple skills with provided instructions and an engaging interface.
+          </p>
+          <p>
+            This site includes features such as the following:
+            <ul>
+              <li>22 unique possible skills to learn.</li>
+              <li>The ability to check of completed skills</li>
+              <li>A user-account sign-in for tracking and storing completion of skills</li>
+            </ul>
+            Your goal is to try to learn a new skill every day and potentially find a new passion alongside that!
+            
+            Some example skills include...
+            <ul>
+              <li>Mastering card tricks</li>
+              <li>Tying a tie for a formal occasion</li>
+              <li>Deciphering Morse Code</li>
+              <li>Playing Chess</li>
+            </ul>
+            and many more!
+          </p>
+          <h2>Development</h2>
+          <p>
+            In developing this website, we used the following technologies and resources:
+            <ul>
+              <li>AWS Amplify, for hosting our website</li>
+              <li>GraphQL, for backend database management</li>
+              <li>Figma, for designing the appearance of the website pages</li>
+              <li>React, for coding and designing our website</li>
+              <li>YouTube, for embedding instructional videos</li>
+              <li>Github, for code sharing</li>
+              <li>Jira, for time and task management between members</li>
+            </ul>
+          </p>
+        </div>
+  
+    </section>-->
+
+   
+  </main><!-- End #main -->
+
+  <footer></footer>
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+  <script src="assets/js/project.json"></script>
+</body>
+
+</html>
