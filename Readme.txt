@@ -1,6 +1,5 @@
-Thanks for downloading this template!
+Lilly Moreau's Portfolio
 
-Template Name: DevFolio
-Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Link: https://lmoreau21.github.io/portfolio/
+
+Tech stack: html, css, js, bootstrap
