@@ -69,8 +69,32 @@
 
               const projectData = data[id];
               console.log(projectData);
-
+              document.addEventListener("DOMContentLoaded", function () {
+                const openPopupButton = document.getElementById("openPopup");
+                const closePopupButton = document.getElementById("closePopup");
+                const popupContainer = document.getElementById("popupContainer");
+                const embedContainer = document.getElementById("embedContainer");
+                const body = document.body;
+                // Add click event listener to open the popup
+                openPopupButton.addEventListener("click", function () {
+                  if (projectData.embed) {
+                    popupContainer.style.display = "block"; // Show the popup container
+                    body.classList.add("popup-open"); // Add the class to disable scrolling
+                    embedContainer.innerHTML = projectData.embed ? `<div class="embed-container"><iframe src="${projectData.embed}" frameborder="0"></iframe></div>` : '';
+                }
+              });
+                            
+                // Add click event listener to close the popup
+                closePopupButton.addEventListener("click", function () {
+                  popupContainer.style.display = "none"; // Hide the popup container
+                  embedContainer.innerHTML = ""; // Clear the embedded iframe content
+                  body.classList.remove('popup-open');
+                });
+              });
               var projectElement = document.createElement("div");
+              // Select the necessary elements
+          
+              
               projectElement.innerHTML = `
 
               
@@ -90,18 +114,21 @@
               <section id="jaot" class="portfolio-details">
      
     
-              <div class="container" style="width: 50%; background-color: #8f0101;padding-top: 20px;">
-                <div class="portfolio-details-slider swiper">
-                  <div class="swiper-wrapper align-items-center">
+                <div class="container" style="width: 50%; background-color: #8f0101; padding-top: 20px;">
+                  <div class="portfolio-details-slider swiper">
+                    <div class="swiper-wrapper align-items-center">
 
-                    <div class="swiper-slide">
-                      <img src="assets/img/${projectData.img}" alt="" width="50%">
+                      <div class="swiper-slide">
+                        <div class="image-container">
+                          <img src="assets/img/${projectData.img}" alt="Project Image" class="project-image">
+                        </div>
+                      </div>
+
                     </div>
-
+                    <div class="swiper-pagination"></div>
                   </div>
-                  <div class="swiper-pagination"></div>
                 </div>
-              </div>
+
 
 
 
@@ -117,11 +144,28 @@
               <h2>About</h2>
                 <p> ${projectData.description}</p>
                 <p>Tech stack:</strong> ${projectData.techstack.join(", ")}</p>
-              </div> 
+         
+                <!-- Button to open the popup -->
+                <button id="openPopup" type="button" class="btn btn-outline-dark btn-block" style="display: ${projectData.embed ? 'block' : 'none'};">Test It Out</button>
+                
+                <!-- The popup container -->
+                <div class="popup-container" id="popupContainer">
+                  <!-- Close button -->
+                  <button id="closePopup" >Close</button>
+                  <!-- Embedded iframe -->
+                  <div class="embed-container" id="embedContainer"></div>
+                  
+               </div>
+               <br><br>
+
+                </div> 
+                
               </section>
+              
                 `;
               projectsList.appendChild(projectElement);
           }).catch(error => console.error(error));
+          
         </script>
         </div>
         
