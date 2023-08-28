@@ -200,7 +200,7 @@ a:hover {
   position: absolute;
   height: 3px;
   background-color: #8f0101;
-  width: 100px;
+  width: 150px;
   bottom: -12px;
 }
 
@@ -1215,7 +1215,8 @@ footer .credits a {
   background-color: rgba(0, 0, 0, 0.8); /* Solid opaque background */
   z-index: 9999; /* Ensure the popup is above other content */
   text-align: center;
-  padding: 20px;
+  padding: 40px;
+  padding-bottom: 50px;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -1223,29 +1224,17 @@ body.popup-open {
   overflow: hidden; /* Disable scrolling on the main page when popup is open */
 }
 
-.popup-container #closePopup {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
 .embed-container {
-  width: 110%;
-  height: 110%;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .embed-container iframe {
-  width: 90%;
-  height: 90%;
+  width: 90vw;
+  height: 80vh;
   border: none;
 }
 

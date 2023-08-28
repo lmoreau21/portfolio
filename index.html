@@ -71,7 +71,7 @@
                     <div class="col-sm-6 col-md-7">
                       <div class="about-info">
                         <p><span class="title-s">Name: </span> <span>Lilly Moreau</span></p>
-                        <p><span class="title-s">Profile: </span> <span>Student & Intern</span></p>
+                        <p><span class="title-s">Profile: </span> <span>College Student & Software Engineering Intern</span></p>
                         <p><span class="title-s">Email: </span> <span>lmoreau2021@gmail.com</span></p>
                         <p><span class="title-s">Phone: </span> <span>(504) 234-6866</span></p>
                       </div>
@@ -109,8 +109,11 @@
                       </h5>
                     </div>
                     <p class="lead">
-                      I am a senior at Louisiana State University majoring in Computer Science with a concentration in Software Engineering. <br><br>Currently, I am a technical Intern at DXC Technology since June 2022 (except for the summer of 2023). I have worked on multiple internal projects as a Scrum Master, Business Analyst, AWS Developer, Design Thinker, and frontend developer, and I am exploring UX/UI design. <br><br>I was also a software engineering intern at Chevorn in Houston, TX during the summer of 2023. I primarily worked in python doing geospatial work. <br><br>I am also a fourth degree black belt and instructor in Tiger Rock Martial Arts, and I am the alumni chair at an LSU organization called the Society of Peer Mentors. I also do Brazilian jiu-jitsu and rock climbing in my free time.
+                      I am a senior at Louisiana State University majoring in Computer Science with a concentration in Software Engineering. <br><br>Currently, I am a technical Intern at DXC Technology since June 2022 (except for the summer of 2023). I have worked on multiple internal projects as a Scrum Master, Business Analyst, AWS Developer, Design Thinker, and frontend developer, and I am exploring UX/UI design. <br><br>I was also a software engineering intern at Chevron in Houston, TX during the summer of 2023. I primarily worked in python doing geospatial work. <br><br>I am also a fourth degree black belt and instructor in Tiger Rock Martial Arts, and I am the alumni chair at an LSU organization called the Society of Peer Mentors. I also do Brazilian jiu-jitsu and rock climbing in my free time.
                     </p>
+                    <object data="\Users\lmore\OneDrive\Desktop\Lillian Moreau Resume 8-23-23.pdf" type="application/pdf" width="100%" height="500px">
+                      <p>Unable to display PDF file. <a href="\Users\lmore\OneDrive\Desktop\Lillian Moreau Resume 8-23-23.pdf">Download</a> instead.</p>
+                    </object>
                   </div>
                 </div>
               </div>
@@ -306,35 +309,30 @@
                       </h5>
                     </div>
                     <div>
-                      <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                      <form action="mailto:lmoreau2021@gmail.com" method="post" enctype="text/plain">
                         <div class="row">
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
-                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                              <input type="text" class="form-control" id="name" placeholder="Your Name" required>
                             </div>
                           </div>
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
-                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                              <input type="email" class="form-control" id="email" placeholder="Your Email" required>
                             </div>
                           </div>
                           <div class="col-md-12 mb-3">
                             <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                              <input type="text" class="form-control" id="subject" placeholder="Subject" required>
                             </div>
                           </div>
                           <div class="col-md-12">
                             <div class="form-group">
-                              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                              <textarea class="form-control" rows="5" id="message" placeholder="Message" required></textarea>
                             </div>
                           </div>
-                          <div class="col-md-12 text-center my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                          </div>
                           <div class="col-md-12 text-center">
-                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                            <button class="button button-a button-big button-rouded" id="sendEmailButton">Send Message</button>
                           </div>
                         </div>
                       </form>
@@ -348,7 +346,7 @@
                       <ul class="list-ico">
                         <li><span class="bi bi-geo-alt"></span> New Orleans, LA</li>
                         <li><span class="bi bi-phone"></span> (504) 234-6866</li>
-                        <li><span class="bi bi-envelope"></span> lmoreau2021@gmail.com</li>
+                        <li><span class="bi bi-envelope"></span> <a href="mailto:lmoreau2021@gmail.com">lmoreau2021@gmail.com</a></li>
                       </ul>
                     </div>
                     <div class="socials">
@@ -365,6 +363,32 @@
         </div>
       </div>
     </section>
+  
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const sendEmailButton = document.getElementById("sendEmailButton");
+        if (sendEmailButton) {
+          sendEmailButton.addEventListener("click", function() {
+            const name = document.getElementById("name").value;
+            const subject = document.getElementById("subject").value;
+            const message = document.getElementById("message").value;
+            
+            const emailBody = `${message}
+              \n${name}
+            `;
+            
+            const emailLink = `mailto:lmoreau2021@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            window.location.href = emailLink;
+          });
+        }
+      });
+      </script>
+    
+    
+    
+    
+    
   </main>
 
   <div id="preloader"></div>
@@ -375,8 +399,7 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
+  
   <script src="assets/js/main.js"></script>
   
   <script src="assets/js/project.json"></script>
