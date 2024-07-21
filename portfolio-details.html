@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>DevFolio Bootstrap Portfolio Template - Portfolio Details</title>
+  <title>Project Details</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <!--<script src="js/project_data.json"></script> -->
@@ -114,18 +114,9 @@
               <section id="jaot" class="portfolio-details">
      
     
-                <div class="container" style="width: 50%; background-color: #8f0101; padding-top: 20px;">
-                  <div class="portfolio-details-slider swiper">
-                    <div class="swiper-wrapper align-items-center">
-
-                      <div class="swiper-slide">
-                        <div class="image-container">
-                          <img src="assets/img/${projectData.img}" alt="Project Image" class="project-image">
-                        </div>
-                      </div>
-
-                    </div>
-                    <div class="swiper-pagination"></div>
+                <div class="container" style="width: 75%">
+                  <div class="image-container">
+                    <img src="assets/img/${projectData.img}" alt="Project Image" class="project-image">
                   </div>
                 </div>
 
@@ -143,14 +134,21 @@
                     <li><strong>Tech Stack:</strong> ${projectData.techstack.join(", ")}</li>
                   </ul>
                   ${projectData.youtube ? `<iframe src="https://www.youtube.com/embed/${projectData.youtube.split('/').pop()}" frameborder="0" style="width:100%; height:315px;" allowfullscreen></iframe>` : ''}
-                  ${projectData.embed ? `<button id="openPopup" class="btn btn-outline-dark mt-3">Test It Out</button>` : ''}
-                  <div id="popupContainer" class="popup-container d-none">
-                    <div id="embedContainer" class="embed-container"></div>
-                    <button id="closePopup" class="btn btn-outline-light">Close</button>
-                  </div>
+                  <!-- Button to open the popup -->
+                    <button id="openPopup" type="button" class="btn btn-outline-dark btn-block" style="display: ${projectData.embed ? 'block' : 'none'};">Test It Out</button>
+                    
+                    <!-- The popup container -->
+                    <div class="popup-container" id="popupContainer">
+                      <!-- Embedded iframe -->
+                      <div class="embed-container" id="embedContainer"></div>
+                      <!-- Close button -->
+                      <button id="closePopup" type="button" class="btn btn-outline-light btn-block">Close</button>
+                      
+                   </div>
                 </div>
               </div>
               </section>
+              <div class="container" style="padding-top: 20px;">
               
                 `;
               projectsList.appendChild(projectElement);
