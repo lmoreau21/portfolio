@@ -133,33 +133,23 @@
 
 
               <div class="portfolio-info"  style="width: 70%; margin-left: 15%;">
-              <h3>Overview</h3>
-                <ul>
-                <li><strong>Category:</strong> ${projectData.category}</p>
-                 <li><strong>Project date:</strong> ${projectData.date}</li>
-                <li><strong>Project URL</strong>: <a href="${projectData.github}"> ${projectData.github}</a></li>
-              <ul>
+                <div class="col-lg-6">
+                  <h3>Overview</h3>
+                  <ul class="list-unstyled">
+                    <li><strong>Category:</strong> ${projectData.category}</li>
+                    <li><strong>Date:</strong> ${projectData.date}</li>
+                    <li><strong>URL:</strong> <a href="${projectData.github}" target="_blank">${projectData.github}</a></li>
+                    <li><strong>Description:</strong> ${projectData.description}</li>
+                    <li><strong>Tech Stack:</strong> ${projectData.techstack.join(", ")}</li>
+                  </ul>
+                  ${projectData.youtube ? `<iframe src="https://www.youtube.com/embed/${projectData.youtube.split('/').pop()}" frameborder="0" style="width:100%; height:315px;" allowfullscreen></iframe>` : ''}
+                  ${projectData.embed ? `<button id="openPopup" class="btn btn-outline-dark mt-3">Test It Out</button>` : ''}
+                  <div id="popupContainer" class="popup-container d-none">
+                    <div id="embedContainer" class="embed-container"></div>
+                    <button id="closePopup" class="btn btn-outline-light">Close</button>
+                  </div>
+                </div>
               </div>
-              <div class="portfolio-description" style="width: 70%; margin-left: 15%;">
-              <h2>About</h2>
-                <p> ${projectData.description}</p>
-                <p>Tech stack:</strong> ${projectData.techstack.join(", ")}</p>
-         
-                <!-- Button to open the popup -->
-                <button id="openPopup" type="button" class="btn btn-outline-dark btn-block" style="display: ${projectData.embed ? 'block' : 'none'};">Test It Out</button>
-                
-                <!-- The popup container -->
-                <div class="popup-container" id="popupContainer">
-                  <!-- Embedded iframe -->
-                  <div class="embed-container" id="embedContainer"></div>
-                  <!-- Close button -->
-                  <button id="closePopup" type="button" class="btn btn-outline-light btn-block">Close</button>
-                  
-               </div>
-               <br><br>
-
-                </div> 
-                
               </section>
               
                 `;
@@ -169,57 +159,6 @@
         </script>
         </div>
         
-      
-      <!--
-        <div class="portfolio-info"  style="width: 70%; margin-left: 15%;">
-          <h3>Overview</h3>
-          <ul>
-            <li><strong>Category</strong>: Web design</li>
-            <li><strong>Project date</strong>: Fall 2022</li>
-            <li><strong>Project URL</strong>: <a href="#">https://github.com/lmoreau21/JacksOfAllTrades</a></li>
-          </ul>
-        </div>
-        <br>
-        <div class="portfolio-description" style="width: 90%; margin-left: 5%;">
-          <h2>About</h2>
-          <p>
-            Learning new skills can be a difficult task without the proper resources. Many services out there are overly complicated, time consuming, and may charge hidden fees. Our website, Jack of all Trades, allows users to effectively learn new simple skills with provided instructions and an engaging interface.
-          </p>
-          <p>
-            This site includes features such as the following:
-            <ul>
-              <li>22 unique possible skills to learn.</li>
-              <li>The ability to check of completed skills</li>
-              <li>A user-account sign-in for tracking and storing completion of skills</li>
-            </ul>
-            Your goal is to try to learn a new skill every day and potentially find a new passion alongside that!
-            
-            Some example skills include...
-            <ul>
-              <li>Mastering card tricks</li>
-              <li>Tying a tie for a formal occasion</li>
-              <li>Deciphering Morse Code</li>
-              <li>Playing Chess</li>
-            </ul>
-            and many more!
-          </p>
-          <h2>Development</h2>
-          <p>
-            In developing this website, we used the following technologies and resources:
-            <ul>
-              <li>AWS Amplify, for hosting our website</li>
-              <li>GraphQL, for backend database management</li>
-              <li>Figma, for designing the appearance of the website pages</li>
-              <li>React, for coding and designing our website</li>
-              <li>YouTube, for embedding instructional videos</li>
-              <li>Github, for code sharing</li>
-              <li>Jira, for time and task management between members</li>
-            </ul>
-          </p>
-        </div>
-  
-    </section>-->
-
    
   </main><!-- End #main -->
 

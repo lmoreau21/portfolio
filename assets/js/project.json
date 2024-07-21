@@ -1,133 +1,193 @@
- {
+{
+  "mardigras": {
+    "title": "Mardi Gras LLM",
+    "img": "mardigras.png",
+    "github": "no link",
+    "category": "AI",
+    "date": "Fall 2024",
+    "description": "I partnered with the Advocate for a school project to develop an AI chatbot for Mardi Gras. The chatbot was able to answer questions historical and upcoming questions about Mardi Gras using the Advocate's articles.",
+    "techstack": ["Django Python", "React.js", "OpenAI", "LangChain", "Chroma"],
+    "youtube": "https://youtu.be/VUecxnkGVm0",
+    "priority": 1
+  },
+  "w&w": {
+    "title": "When & Wear",
+    "img": "w&w.png",
+    "github": "no link",
+    "category": "Mobile App",
+    "date": "Spring 2023",
+    "description": "When & Wear is a fashion delivery service that brings clothing and accessories from local boutiques to your door. It was made as a pitch for a school project and ranked first in all categories at multiple competitions.",
+    "techstack": ["React Native", "Firebase"],
+    "youtube": "https://youtu.be/WL-I6NV-aW4",
+    "priority": 2
+  },
+  "hgc": {
+    "title": "Hand Gesture Contoller ",
+    "img": "hsk.png",
+    "github": "https://github.com/lmoreau21/Hand-Gesture-Contoller",
+    "category": "AI",
+    "date": "Fall 2024",
+    "description": "This project is a static gesture detector that allows you to press computer keys using hand symbol. It uses computer vision techniques to recognize predefined hand gestures and trigger corresponding actions..",
+    "techstack": ["Python", "React.js", "OpenCV", "MediaPipe"],
+    "youtube": "https://youtu.be/GkLSWfltXjA",
+    "priority": 3
+  },
+  "hic":{
+    "title": "Beni Bolt",
+    "img": "benibot.jpg",
+    "github": "https://github.com/lmoreau21/Geaux-Hack-The-Globe-2024-Untitled.grp",
+    "category": "AI",
+    "date": "Fall 2024",
+    "description": "This project aims to provide users with easy access to detailed information about Louisiana Medicaid, U.S. government Medicare, and general health insurance questions through a chatbot interface. The chatbot is powered by OpenAI's GPT-3.5 model and utilizes LangChain for efficient data retrieval and response generation, with a Chroma database storing pre-processed, vector-embedded document data. Our Django backend handles API requests and data management, while the React frontend offers an intuitive user interface styled with Material UI.",
+    "techstack": ["Django Python", "React.js", "OpenAI", "LangChain", "Chroma"],
+    "embed":"https://devpost.com/software/benibot",
+    "priority": 4
+  },
+  "polyglotter":{
+    "title": "Polyglotter",
+    "img": "polyglotter.png",
+    "github": "https://github.com/lmoreau21/Polygloter",
+    "category": "Web Design",
+    "date": "Spring 2023",
+    "description": "Polyglotter is a language guessing game inspired by Wordle.",
+    "techstack": ["React.js"],
+    "youtube":"",
+    "embed":"https://lmoreau21.github.io/Polygloter/",
+    "priority": 5
+  },
+  "Sudoku": {
+    "title": "Sudoku Generater & Solver",
+    "img": "sudoku.png",
+    "github": "https://github.com/lmoreau21/Sudoku",
+    "category": "Video Games",
+    "date": "Spring 2023",
+    "description": "This project was a Sudoku generator and solver that was developed as a small side project. It uses a brute force method with eliminations.",
+    "techstack": ["Python"],
+    "youtube": "",
+    "priority": 8
+  },
+  "rl": {
+    "title": "Reinforcement Learning",
+    "img": "bipedal_walker.gif",
+    "github": "no link",
+    "category": "AI",
+    "date": "Winter 2023",
+    "description": "This is placeholder for all of the reinforcement learning projects I have created. I have followed many only tutorials to create various trainers primarily in video games.",
+    "techstack": ["Python", "OpenCV", "OpenAI"],
+    "youtube": "",
+    "priority": 6
+  },
+  "security": {
+    "title": "File System Security Manager",
+    "img": "ldap.png",
+    "github": "https://github.com/CSC-2362-Group-D/file-system-management",
+    "category": "Cyber Security",
+    "date": "Spring 2023",
+    "description": "This project was a file system security manager that was developed for a school project. It was able to manage user permissions and file access.",
+    "techstack": ["React.js", "Django Python", "LDAP"],
+    "youtube": "",
+    "priority": 7
+  },
   "portfolio": {
     "title": "Portfolio",
-    "img":"portfolio.jpg",
+    "img": "portfolio.jpg",
     "github": "https://github.com/lmoreau21/portfolio",
     "category": "Web Design",
     "date": "Spring 2023",
     "description": "You're looking at it!",
-    "techstack": [
-      "JavaScript",
-      "HTML",
-      "CSS"
-    ],
-    "embed":"https://lmoreau21.github.io/portfolio/"
+    "techstack": ["JavaScript", "HTML", "CSS"],
+    "embed": "https://lmoreau21.github.io/portfolio/",
+    "youtube": "",
+    "priority": 10
   },
   "huehunt": {
     "title": "Hue Hunt",
-    "img":"huehunt.png",
+    "img": "huehunt.png",
     "github": "https://github.com/lmoreau21/Hue-Hunt-CSC-2463",
     "category": "Video Games",
     "date": "Spring 2023",
     "description": "Hue Hunt is a game where you have to navigate your character to the correct tile as fast as possible. It is an endless game comprised of a randomly generated map every single round. There is also 3 modes: easy, medium, and hard. You can also change your sprite using a drop down list. The game has a start screen, in-game screen, and a game over screen. There is a main menu and in-game background noise as well as footsteps, game over, and new round noise. It would also work with an ardunio.",
-    "techstack": [
-      "JavaScript",
-      "Tone.js",
-      "P5.js",
-      "Ardunio"
-    ],
-    "embed":"https://lmoreau21.github.io/Hue-Hunt-CSC-2463/"
+    "techstack": ["JavaScript", "Tone.js", "P5.js", "Ardunio"],
+    "embed": "https://lmoreau21.github.io/Hue-Hunt-CSC-2463/",
+    "youtube": "https://youtu.be/BY6RPvsbKjA",
+    "priority": 6
   },
   "joat": {
     "title": "Jacks Of All Trades",
-    "img":"joat.jpg",
+    "img": "joat.jpg",
     "github": "https://github.com/lmoreau21/JacksOfAllTrades",
     "category": "Web Design",
     "date": "Fall 2022",
     "description": "This was a project for CSC 3380 (Object Oriented Design). This was a skill learning website to try fun easy to learn things. The website is now depricated, but it was a great learning expierence.",
-    "techstack": [
-      "AWS Amplify",
-      "GraphQL",
-      "Figma",
-      "React",
-      "YouTube",
-      "GitHub",
-      "Jira"
-    ]
+    "techstack": ["AWS Amplify", "GraphQL", "Figma", "React", "YouTube", "GitHub", "Jira"],
+    "youtube": "",
+    "priority": 7
   },
   "bugsmash": {
     "title": "Bug Smash",
-    "img":"bug.png",
+    "img": "bug.png",
     "github": "https://lmoreau21.github.io/Bug-Smash-CSC-2463/",
     "category": "Video Games",
     "date": "Spring 2023",
     "description": "I built a mouse clicker game that involves trying to smash as many bugs as possible in a given amount of time.",
-    "techstack": [
-      "JavaScript",
-      "P5.js",
-      "Tone.js"
-    ],
-    "embed": "https://lmoreau21.github.io/Bug-Smash-CSC-2463/"
+    "techstack": ["JavaScript", "P5.js", "Tone.js"],
+    "embed": "https://lmoreau21.github.io/Bug-Smash-CSC-2463/",
+    "youtube": "https://youtu.be/ZAcpYT4nm6E",
+    "priority": 8
   },
   "food": {
     "title": "Food Around the World",
-    "img":"BytesAbroad.png",
+    "img": "BytesAbroad.png",
     "github": "https://github.com/StevenSeiden/CSC4402-Spring23",
     "category": "Web Design and Databases",
     "date": "Spring 2023",
-    "description": "This project was an ‘Around the World’ themed restaurant using a Database Management System (DBMS) that will help simplify and streamline the manager’s inventory management and have a centralized place for customer interactions with the application. ",
-    "techstack": [
-      "HTML",
-      "PHP",
-      "Bootstrap",
-      "JavaScript",
-      "MySQL"
-    ]
+    "description": "This project was an ‘Around the World’ themed restaurant using a Database Management System (DBMS) that will help simplify and streamline the manager’s inventory management and have a centralized place for customer interactions with the application.",
+    "techstack": ["HTML", "PHP", "Bootstrap", "JavaScript", "MySQL"],
+    "youtube": "",
+    "priority": 9
   },
   "lexeme": {
     "title": "Lexical Analyser",
-    "img":"lexeme.png",
+    "img": "lexeme.png",
     "github": "to be added",
     "category": "Java",
     "date": "Spring 2023",
-    "description": "CSC 4101 Project which involved developing a lexical analyser to learn more about programming langauges.",
-    "techstack": [
-      "Java"
-    ]
+    "description": "CSC 4101 Project which involved developing a lexical analyser to learn more about programming languages.",
+    "techstack": ["Java"],
+    "youtube": "",
+    "priority": 12
   },
   "wordle": {
-    "title": "Worlde Cheater",
-    "img":"wordle.jpg",
+    "title": "Wordle Cheater",
+    "img": "wordle.jpg",
     "github": "https://github.com/lmoreau/trie",
     "category": "Java",
     "date": "Spring 2022",
     "description": "This was a program developed that used a trie to quickly figure out what are possible wordle options based on what you have guessed so far.",
-    "techstack": [
-      "Java"
-    ]
+    "techstack": ["Java"],
+    "youtube": "",
+    "priority": 13
   },
-  "planet":{
-    "title":"Planet PFT 1269",
-    "img":"planet.png",
+  "planet": {
+    "title": "Planet PFT 1269",
+    "img": "planet.png",
     "github": "https://github.com/lmoreau21/Team-38",
     "category": "Python",
     "date": "August 2022",
-    "description": "This was a program I developed alongside a group of incoming college freshman for a competiton. I had to learn some basic python, so I could teach the team. We built a choose your own adventure and survial game which took first place.",
-    "techstack": [
-      "Python"
-    ]
+    "description": "This was a program I developed alongside a group of incoming college freshman for a competition. I had to learn some basic python, so I could teach the team. We built a choose your own adventure and survival game which took first place.",
+    "techstack": ["Python"],
+    "youtube": "",
+    "priority": 14
   },
   "states": {
     "title": "States Game",
-    "img":"states.jpg",
+    "img": "states.jpg",
     "github": "https://github.com/lmoreau/states",
     "category": "Java",
     "date": "Spring 2022",
     "description": "Quiz game for state capitals",
-    "techstack": [
-      "Java"
-    ]
-  },
-  "wireframe": {
-    "title": "Wireframe Collection",
-    "img":"wireframe.png",
-    "category": "UI/UX",
-    "date": "Spring 2023",
-    "github": "no link",
-    "description": "I have developed wireframes in figma and adobe xd for various projects.",
-    "techstack": [
-      "Figma",
-      "AdobeXD"
-    ]
+    "techstack": ["Java"],
+    "youtube": "",
+    "priority": 15
   }
 }
